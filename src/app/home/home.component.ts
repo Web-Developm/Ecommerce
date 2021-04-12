@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  add=():any =>{
+    console.log("Added to the cart");
+  }
+
 }

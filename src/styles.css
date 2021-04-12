@@ -49,6 +49,11 @@
   padding:0px 0px 40px 0px;
 }
 
+.item{
+  font-size:45px;
+  margin-bottom:50px;
+}
+
 .col-sm-3{
   padding:0px 0px 40px 0px;
   text-align: center;
