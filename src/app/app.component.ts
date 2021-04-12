@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import {NavigationExtras} from "@angular/router";
+import { NavigationExtras } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -10,14 +10,17 @@ import {NavigationExtras} from "@angular/router";
 export class AppComponent {
   title = 'e-commerce';
 
-  constructor(private route:ActivatedRoute, private router:Router)
-  {
+  constructor(private route: ActivatedRoute, private router: Router) {
 
   }
 
-  cart()
+  call()
   {
-    this.router.navigate(['cart'], {relativeTo:this.route});
+    alert("Calling");
+  }
+
+  cart() {
+    this.router.navigate(['cart'], { relativeTo: this.route });
   }
 
 }
