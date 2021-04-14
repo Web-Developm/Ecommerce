@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
     console.log(this.items);
   }
 
-  items=this.fs.getItems();
+  items:Product[]=this.fs.getItems();
 
 
 

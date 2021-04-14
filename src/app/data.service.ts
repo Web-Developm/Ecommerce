@@ -15,7 +15,7 @@ export class DataService {
       description: "Shirt",
       price: 1000,
       image: "../../assets/2.jpg",
-      quantity: 0
+      quantity: 1
     },
 
     {
@@ -24,7 +24,7 @@ export class DataService {
       description: "Shirt",
       price: 599,
       image: "../../assets/3.jpg",
-      quantity: 0
+      quantity: 1
     },
 
     {
@@ -33,7 +33,7 @@ export class DataService {
       description: "Tshirt",
       price: 799,
       image: "../../assets/4.jpg",
-      quantity: 0
+      quantity: 1
     },
 
     {
@@ -42,7 +42,7 @@ export class DataService {
       description: "Tshirt",
       price: 999,
       image: "../../assets/5.jpg",
-      quantity: 0
+      quantity: 1
     },
 
     {
@@ -51,7 +51,7 @@ export class DataService {
       description: "Toy  ",
       price: 1199,
       image: "../../assets/6.jpg",
-      quantity: 0
+      quantity: 1
     },
 
     {
@@ -60,60 +60,68 @@ export class DataService {
       description: "Toy",
       price: 1299,
       image: "../../assets/7.jpg",
-      quantity: 0
+      quantity: 1
     },
 
     {
       id: 7,
-      name: "Cars",
+      name: "Man",
       description: "Toy",
       price: 1199,
       image: "../../assets/8.jpg",
-      quantity: 0
+      quantity: 1
     },
 
     {
       id: 8,
+      name: "Cars",
+      description: "Toy",
+      price: 2000,
+      image: "../../assets/9.jpg",
+      quantity: 1
+    },
+    {
+      id: 9,
       name: "Football",
       description: "Sports",
       price: 2000,
-      image: "../../assets/9.jpg",
-      quantity: 0
-    },
-
-    {
-      id: 9,
-      name: "Basketball",
-      description: "Sports",
-      price: 2000,
       image: "../../assets/10.jpg",
-      quantity: 0
+      quantity: 1
     },
 
     {
       id: 10,
-      name: "Baseball",
+      name: "Basketball",
       description: "Sports",
-      price: 3000,
+      price: 2000,
       image: "../../assets/11.jpg",
-      quantity: 0
+      quantity: 1
     },
 
     {
       id: 11,
+      name: "Baseball",
+      description: "Sports",
+      price: 3000,
+      image: "../../assets/12.jpg",
+      quantity: 1
+    },
+
+    {
+      id: 12,
       name: "Volleyball",
       description: "Sports",
       price: 1500,
-      image: "../../assets/12.jpg",
-      quantity: 0
+      image: "../../assets/13.jpg",
+      quantity: 1
     }
 
   ];
 
-  items: Product[] = [];
+  items: Product[] = this.products;
 
-  add(item: any) {
-    this.items.push(item);
+  add(items: any) {
+    this.items.push(items);
   }
 
   getItems() {
