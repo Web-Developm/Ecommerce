@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input} from '@angular/core';
 import { DataService } from '../data.service';
 import {Product} from '../product';
 
@@ -12,7 +12,7 @@ import {Product} from '../product';
 })
 export class CartComponent implements OnInit {
 
-
+  @Input() data:any;
 
   constructor(private fs: DataService) {
     console.log(this.items);
