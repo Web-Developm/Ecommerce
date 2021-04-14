@@ -11,18 +11,15 @@
   margin-top:40px;
   padding:100px 50px 50px  120px;
   background-color: beige;
+  border-radius: 15px;
 }
 
-@media screen and(max-width:1020px)
-{
-
-}
 
 .text{
   padding:20px 0px 10px 0px;
   width: 35%;
   text-align: justify;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-size: 17px;
 }
 
@@ -47,6 +44,7 @@
 
 .items{
   padding:0px 0px 40px 0px;
+  margin-bottom: 100px;
 }
 
 .item{
@@ -54,10 +52,7 @@
   margin-bottom:50px;
 }
 
-.col-sm-3{
-  padding:0px 0px 40px 0px;
-  text-align: center;
-}
+
 
 .footer{
   padding:10px 0px 5px 0px;

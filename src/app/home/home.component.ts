@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../data.service';
+import {CartService} from '../cart.service';
+import {Product} from '../product';
 
 @Component({
   selector: 'app-home',
@@ -9,19 +11,22 @@ import {DataService} from '../data.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private fs:DataService) { }
+  constructor(private fs:DataService, private ct:CartService) { }
 
   ngOnInit(): void {
   }
 
-  data=this.fs.products;
+  data:Product[]=this.fs.products;
 
   call=():any =>{
     alert("Calling");
   }
 
-  add=():any =>{
-    console.log("Added to the cart");
+  add=(item:any):any =>{
+    this.fs.add(item);
+    alert("Your product has been added to the cart!");
+    console.log(item);
   }
+
 
 }

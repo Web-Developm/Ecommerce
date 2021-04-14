@@ -3,8 +3,27 @@
   grid-template-columns: auto auto auto;
 }
 
+@media screen and(max-width:1020px)
+{
+  .row{
+
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .col{
   padding:10px;
   margin:10px;
 }
+
+.card{
+  border-radius: 20px;
+}
+
+.btn{
+  border-radius: 20px;
+  font-size: 15px;
+}
+
 
