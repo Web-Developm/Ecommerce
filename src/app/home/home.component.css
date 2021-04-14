@@ -1,0 +1,10 @@
+.row{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+
+.col{
+  padding:10px;
+  margin:10px;
+}
+

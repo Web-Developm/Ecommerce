@@ -4,7 +4,7 @@
     out our new arrivals to view the latest designer clothing, footwear and accessories in the market. You can get your
     hands on the trendiest style every season in western wear.</p>
 
-  <button type="button" class="btn btn-lg btn-outline-dark">Call To Action</button>
+  <button (click)="call()" type="button" class="btn btn-lg btn-outline-dark">Call To Action</button>
 </div>
 
 <div class="container content">
@@ -20,150 +20,19 @@
 <div class="container items">
   <h2 class="text-center item">Items</h2>
 
-  <div class="row">
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\2.jpg" class="card-img-top" alt="">
+  <div class="row" *ngFor="let sample of data">
+    <div class="col">
+      <div class="card text-center" style="width:18rem">
+        <img src="{{sample.image}}" class="card-img-top" alt="">
         <div class="card-body">
-          <h5 class="card-title text-center">Mast & Harbour</h5>
-          <p>Rs.799</p>
+          <h5 class="card-title text-center">{{sample.id}}.{{sample.name}}</h5>
+          <p>{{sample.description}}</p>
+          <p>Rs.{{sample.price}}</p>
 
           <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
         </div>
       </div>
     </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\3.jpg" class="card-img-top img-fluid" alt="">
-        <div class="card-body">
-          <h5 class="card-title text-center">Roadster</h5>
-          <p>Rs.599</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\4.jpg" class="card-img-top img-fluid" alt="">
-        <div class='card-body'>
-          <h5 class="card-title text-center">H&M</h5>
-          <p>Rs.799</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\5.jpg" class="card-img-top img-fluid" alt="">
-        <div class='card-body'>
-          <h5 class="card-title text-center">H&M</h5>
-          <p>Rs.699</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\6.jpg" class="card-img-top img-fluid" alt="...">
-        <div class="card-body">
-          <h5 class="card-title text-center">Teddy Bear</h5>
-          <p>Rs.999</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\7.jpg" class="card-img-top img-fluid" alt="">
-        <div class="card-body">
-          <h5 class="card-title text-center">Areoplane</h5>
-          <p>Rs.1199</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\8.jpg" class="card-img-top img-fluid" alt="">
-        <div class='card-body'>
-          <h5 class="card-title text-center">Toy</h5>
-          <p>Rs.1299</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\9.jpg" class="card-img-top img-fluid" alt="">
-        <div class='card-body'>
-          <h5 class="card-title text-center">Cars</h5>
-          <p>Rs.1199</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-
-
-  <div class="row">
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\10.jpg" class="card-img-top img-fluid" alt="...">
-        <div class="card-body">
-          <h5 class="card-title text-center">Football</h5>
-          <p>Rs.2000</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\11.jpg" class="card-img-top img-fluid" alt="">
-        <div class="card-body">
-          <h5 class="card-title text-center">Basketball</h5>
-          <p>Rs.2000</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\12.jpg" class="card-img-top img-fluid" alt="">
-        <div class='card-body'>
-          <h5 class="card-title text-center">Baseball</h5>
-          <p>Rs.3000</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width:18rem">
-        <img src="\assets\13.jpg" class="card-img-top img-fluid" alt="">
-        <div class='card-body'>
-          <h5 class="card-title text-center">Volleyball</h5>
-          <p>Rs.1500</p>
-          <button (click)="add()" type="button" class="btn btn-outline-dark">Add Product</button>
-        </div>
-      </div>
-    </div>
-
-
   </div>
 
 </div>

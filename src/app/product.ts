@@ -4,14 +4,16 @@ export class Product {
   description!:String;
   price!:Number;
   image!:String;
+  quantity!:Number;
 
-  constructor(id:number,name:string,description=" ", price=0, image:string)
+
+  /*constructor(id:number,name:string,description=" ", price=0, image:string)
   {
     this.id=id;
     this.name=name;
     this.description=description;
     this.price=price;
     this.image=image;
-  }
+  }*/
 
 }
