@@ -20,7 +20,7 @@
 <div class="container items">
   <h2 class="text-center item">Items</h2>
 
-  <div class="row" *ngFor="let sample of data">
+  <div class="row" *ngFor="let sample of products; let i=index">
     <div class="col">
       <div class="card text-center" style="width:18rem">
         <img src="{{sample.image}}" class="card-img-top img-fluid" alt="" style="opacity: 1;">
@@ -30,12 +30,11 @@
           <br>
           <br>
           <p>Rs. {{sample.price}}</p>
-          <button (click)="add(sample)" type="button" class="btn btn-outline-dark btn-sm"><i class="fas fa-fw fa-cart-plus"></i> Add Product</button>
+          <button (click)="add(i)" type="button" class="btn btn-outline-dark btn-sm"><i
+              class="fas fa-fw fa-cart-plus"></i> Add
+            Product</button>
         </div>
       </div>
     </div>
   </div>
-
 </div>
-
-

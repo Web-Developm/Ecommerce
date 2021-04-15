@@ -1,6 +1,9 @@
-import { Component, OnInit,Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../data.service';
-import {Product} from '../product';
+import { CartService } from '../cart.service';
+import { Product } from '../product';
+import { data } from '../core/data';
+
 
 
 
@@ -8,22 +11,39 @@ import {Product} from '../product';
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
-  providers: [DataService]
+  providers: [DataService, CartService]
 })
 export class CartComponent implements OnInit {
 
-  @Input() data:any;
+  carts!: any;
+  cartDetails!: any;
 
-  constructor(private fs: DataService) {
-    console.log(this.items);
+  constructor(private ds: DataService, private cs: CartService, private dt: data) {
+
   }
 
-  items:Product[]=this.fs.getItems();
+  public items:any[]= this.dt.cart;
+
+  getCart() {
+    this.ds.getCartItems().subscribe(
+      data => {
+        this.carts = data;
+      }
+    )
+  }
+
+
+
+
 
 
 
   ngOnInit(): void {
+    console.log(this.dt.cart);
+  }
 
+  ngOnChanges(): void {
+    console.log(this.items);
   }
 
 }
