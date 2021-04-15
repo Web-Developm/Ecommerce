@@ -24,6 +24,8 @@ export class CartComponent implements OnInit {
 
   public items:any[]= this.dt.cart;
 
+  public sum:any=this.dt.total;
+
   getCart() {
     this.ds.getCartItems().subscribe(
       data => {

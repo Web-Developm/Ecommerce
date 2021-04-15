@@ -99,15 +99,17 @@ export class data {
     }
   ];
 
-  cart: any = [];
+  public cart: any = [];
 
   addtoCart(index: any) {
     this.cart.push(
       this.products[index])
   }
 
-  sum=0;
-  value:any;
+  total=0;
+
+
+
 
 
 }

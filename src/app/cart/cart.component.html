@@ -4,6 +4,7 @@
     <thead class="text-center bg-light text-black">
       <tr>
         <th>Name</th>
+        <th>Description</th>
         <th>Price</th>
         <th>Quantity</th>
         <th>Total</th>
@@ -11,12 +12,13 @@
       </tr>
     </thead>
 
-    <tbody *ngFor="let item of items" class="text-center">
+    <tbody *ngFor="let item of items; let i=index" class="text-center">
       <tr>
         <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
         <td>{{item.price}}</td>
         <td><input type="number" min="0" max="5" [(ngModel)]=item.quantity></td>
-        <td></td>
+        <td>{{item.price * item.quantity}}</td>
       </tr>
 
     </tbody>
