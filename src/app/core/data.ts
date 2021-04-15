@@ -1,3 +1,4 @@
+
 export class data {
   products = [
     {
@@ -99,15 +100,25 @@ export class data {
     }
   ];
 
-  public cart: any = [];
+  public cart: any[] = [];
 
   addtoCart(index: any) {
     this.cart.push(
       this.products[index])
   }
 
-  total=0;
+  logTheData() {
+    console.log(this.cart)
+  }
 
+  total: any = 0;
+
+
+  producttotal(index: any): any {
+    //this.total[index] = <any>this.cart.map(element => element.price * element.quantity);
+
+    //console.log(this.total[index] = <any>this.cart.map(element => element.price * element.quantity));
+  }
 
 
 

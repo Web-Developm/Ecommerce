@@ -1,5 +1,7 @@
 <div class="container cart">
 
+
+
   <table class="table">
     <thead class="text-center bg-light text-black">
       <tr>
@@ -7,7 +9,7 @@
         <th>Description</th>
         <th>Price</th>
         <th>Quantity</th>
-        <th>Total</th>
+        <th>Sub Total</th>
 
       </tr>
     </thead>
@@ -17,14 +19,17 @@
         <td>{{item.name}}</td>
         <td>{{item.description}}</td>
         <td>{{item.price}}</td>
-        <td><input type="number" min="0" max="5" [(ngModel)]=item.quantity></td>
-        <td>{{item.price * item.quantity}}</td>
+        <td style="text-align:center"><input type="number" min="0" max="5" [(ngModel)]=item.quantity></td>
+        <td>Rs. {{total(i)}}</td>
+
       </tr>
 
     </tbody>
+
   </table>
 
   <p class="total">Total Rs.</p>
+
 
 
 
