@@ -1,10 +1,11 @@
-<div class="container cart">
+<div class="container cart table-responsive">
 
 
 
-  <table class="table">
+  <table class="table ">
     <thead class="text-center bg-light text-black">
       <tr>
+        <th>Delete</th>
         <th>Name</th>
         <th>Description</th>
         <th>Price</th>
@@ -16,11 +17,12 @@
 
     <tbody *ngFor="let item of items; let i=index" class="text-center">
       <tr>
+        <td><button (click)="delete(i)" class="btn btn-sm btn-outline-dark"><i class="fas fa-trash-alt"></i></button></td>
         <td>{{item.name}}</td>
         <td>{{item.description}}</td>
         <td>{{item.price}}</td>
-        <td style="text-align:center"><input type="number" min="0" max="5" [(ngModel)]=item.quantity></td>
-        <td>Rs. {{total(i)}}</td>
+        <td style="text-align:center"><input type="number" min="0" max="5"(change)="inputChange(i,$event)" ></td>
+
 
       </tr>
 
@@ -28,7 +30,7 @@
 
   </table>
 
-  <p class="total">Total Rs.</p>
+  <p class="total">Total Rs</p>
 
 
 

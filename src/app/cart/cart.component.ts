@@ -12,14 +12,13 @@ import { data } from '../core/data';
 })
 export class CartComponent implements OnInit {
 
-  constructor(private ds: DataService, private dt: data) {
+  constructor(private ds: DataService, public dt: data) {
 
   }
 
   public items: any[] = this.dt.cart;
 
   total(index: any) {
-    this.dt.producttotal(index);
   }
 
   ngOnInit(): void {
@@ -27,6 +26,14 @@ export class CartComponent implements OnInit {
     this.dt.logTheData();
   }
 
+  inputChange(indx:number,e:any){
+    this.dt.producttotal(indx,e.target.value);
+  }
+
+  delete(index:any)
+  {
+    this.dt.delete(index);
+  }
 
 
 }

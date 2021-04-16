@@ -114,10 +114,26 @@ export class data {
   total: any = 0;
 
 
-  producttotal(index: any): any {
-    //this.total[index] = <any>this.cart.map(element => element.price * element.quantity);
+  producttotal(index: any, quantity: number): any {
+    let data = this.cart[index];
 
-    //console.log(this.total[index] = <any>this.cart.map(element => element.price * element.quantity));
+    let prices=data.price;
+
+    data.quantity = quantity;
+
+    data.price = prices * quantity;
+
+    this.total= data.price;
+
+    console.log(data);
+
+  }
+
+  delete(index:any)
+  {
+    this.cart.splice(index,1);
+    console.log("product is removed");
+    alert("Product is removed");
   }
 
 
