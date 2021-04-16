@@ -19,6 +19,8 @@ export class CartComponent implements OnInit {
   public items: any[] = this.dt.cart;
 
 
+
+
   ngOnInit(): void {
     console.log(this.dt.cart);
 

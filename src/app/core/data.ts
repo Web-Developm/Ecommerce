@@ -27,7 +27,7 @@ export class data {
       "price": 799,
       "image": "../../assets/4.jpg",
       "quantity": 1,
-      "total": 0,
+      "total": 0
 
     },
     {
@@ -122,82 +122,30 @@ export class data {
   }
 
   total: any = 0;
-  prices = [
-    {
-      id: 0,
-      price: 1000
-    },
 
-    {
-      id: 1,
-      price: 599
-    },
 
-    {
-      id: 2,
-      price: 799
-    },
 
-    {
-      id: 3,
-      price: 999
-    },
 
-    {
-      id: 4,
-      price: 1199
-    },
+  producttotal(index: any, quantity: any): any {
 
-    {
-      id: 5,
-      price: 1299
-    },
+    if (quantity >= 1) {
+      let data = this.cart[index];
 
-    {
-      id: 6,
-      price: 1199
-    },
+      //let test = this.prices.find(element => element.id === data.id);
+      //console.log(test);
 
-    {
-      id: 7,
-      price: 2000
-    },
+      data.quantity = quantity;
 
-    {
-      id: 8,
-      price: 2000
-    },
+      data.total = data.price * quantity;
 
-    {
-      id: 9,
-      price: 2000
-    },
-
-    {
-      id: 10,
-      price: 3000
-    },
-
-    {
-      id: 11,
-      price: 1500
+      console.log(data);
+      console.log(this.products);
     }
-  ];
 
-  producttotal(index: any, quantity: any): any {
-    let data = this.cart[index];
+    else{
+      this.cart.splice(index,1);
+    }
 
-    let test = this.prices.find(element => element.id === data.id);
-    //console.log(test);
-
-    data.quantity = quantity;
-
-    data.total = test!.price * quantity;
-
-
-
-    console.log(data);
-    console.log(this.products);
 
 
   }
