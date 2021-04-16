@@ -27,7 +27,7 @@
         <img src="{{sample.image}}" class="card-img-top img-fluid" alt="">
         <div class="card-body">
           <h5 class="card-title text-center">{{sample.name}} ({{sample.description}})</h5>
-          Quantity: <input type="number" id="quantity" name="quantity" min="0" max="5" [(ngModel)]="sample.quantity">
+          Quantity: <input type="number" id="quantity" name="quantity" min="1" max="5" [(ngModel)]="sample.quantity">
           <br>
           <br>
           <p>Rs. {{sample.price}}</p>

@@ -108,30 +108,54 @@ export class data {
   }
 
   logTheData() {
-    console.log(this.cart)
+    //console.log(this.cart)
   }
 
   total: any = 0;
 
 
+
+
   producttotal(index: any, quantity: number): any {
-    let data = this.cart[index];
 
-    let prices=data.price;
+    if (quantity > 0) {
+      let data = this.cart[index];
 
-    data.quantity = quantity;
+      //let p = this.products[index];
 
-    data.price = prices * quantity;
+      //let test = this.cart.find(element => element.id === p.id);
 
-    this.total= data.price;
+      let prices = data.price;
 
-    console.log(data);
+      data.quantity = quantity;
+
+      data.price = prices * quantity;
+
+      this.total = data.quantity * data.price;
+    }
+
+
+
+    //console.log(data);
 
   }
 
-  delete(index:any)
-  {
-    this.cart.splice(index,1);
+  subtotal(index: any, price: any, quantity: any) {
+
+
+    let data = this.cart[index];
+
+    data.price = price;
+    data.quantity = quantity;
+
+
+    let sub_total = price * quantity;
+
+    console.log(sub_total);
+  }
+
+  delete(index: any) {
+    this.cart.splice(index, 1);
     console.log("product is removed");
     alert("Product is removed");
   }
