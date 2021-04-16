@@ -5,7 +5,7 @@
   <table class="table text-center ">
     <thead class="bg-light text-black">
       <tr>
-        <th>Remove</th>
+        <!--<th>Remove</th>-->
         <th>Name</th>
         <th>Description</th>
         <th>Price</th>
@@ -17,8 +17,8 @@
 
     <tbody *ngFor="let item of items; let i=index">
       <tr>
-        <td><button (click)="delete(i)" class="btn btn-sm btn-outline-dark"><i class="far fa-trash-alt"></i></button>
-        </td>
+        <!--<td><button (click)="delete(i)" class="btn btn-sm btn-outline-dark"><i class="far fa-trash-alt"></i></button>
+        </td>-->
         <td>{{item.name}}</td>
         <td>{{item.description}}</td>
         <td>{{item.price}}</td>
