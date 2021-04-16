@@ -1,3 +1,8 @@
+.message{
+  font-size: 25px;
+  font-weight: 700;
+}
+
 .row{
   display: inline-grid;
   grid-template-columns: auto auto auto;
@@ -6,7 +11,6 @@
 @media screen and(max-width:1020px)
 {
   .row{
-
     display: flex;
     justify-content: center;
   }
