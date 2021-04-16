@@ -22,8 +22,8 @@
         <td>{{item.name}}</td>
         <td>{{item.description}}</td>
         <td>{{item.price}}</td>
-        <td style="text-align:center"><input type="number" min="0" max="5" (change)="inputChange(i,$event)"></td>
-        <td>Rs. {{subtotal}}</td>
+        <td style="text-align:center"><input type="number" min="1" max="5" (change)="inputChange(i,$event)"></td>
+        <td>Rs. {{item.total}}</td>
 
 
       </tr>

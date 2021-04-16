@@ -1,3 +1,4 @@
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
 
 export class data {
   products = [
@@ -7,7 +8,8 @@ export class data {
       "description": "Shirt",
       "price": 1000,
       "image": "../../assets/2.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     },
     {
       "id": 1,
@@ -15,7 +17,8 @@ export class data {
       "description": "Shirt",
       "price": 599,
       "image": "../../assets/3.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     },
     {
       "id": 2,
@@ -23,7 +26,9 @@ export class data {
       "description": "Tshirt",
       "price": 799,
       "image": "../../assets/4.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0,
+
     },
     {
       "id": 3,
@@ -31,7 +36,8 @@ export class data {
       "description": "Tshirt",
       "price": 999,
       "image": "../../assets/5.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     },
     {
       "id": 4,
@@ -39,7 +45,8 @@ export class data {
       "description": "Toy  ",
       "price": 1199,
       "image": "../../assets/6.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     },
     {
       "id": 5,
@@ -47,7 +54,8 @@ export class data {
       "description": "Toy",
       "price": 1299,
       "image": "../../assets/7.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     },
     {
       "id": 6,
@@ -55,7 +63,8 @@ export class data {
       "description": "Toy",
       "price": 1199,
       "image": " ../../assets/8.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     },
     {
       "id": 7,
@@ -63,7 +72,8 @@ export class data {
       "description": "Toy",
       "price": 2000,
       "image": "../../assets/9.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     },
 
     {
@@ -72,7 +82,8 @@ export class data {
       "description": "Sports",
       "price": 2000,
       "image": "../../assets/10.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     },
     {
       "id": 9,
@@ -80,7 +91,8 @@ export class data {
       "description": "Sports",
       "price": 2000,
       "image": "../../assets/11.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     },
     {
       "id": 10,
@@ -88,7 +100,8 @@ export class data {
       "description": "Sports",
       "price": 3000,
       "image": "../../assets/12.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     },
     {
       "id": 11,
@@ -96,7 +109,8 @@ export class data {
       "description": "Sports",
       "price": 1500,
       "image": "../../assets/13.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "total": 0
     }
   ];
 
@@ -107,52 +121,90 @@ export class data {
       this.products[index])
   }
 
-  logTheData() {
-    //console.log(this.cart)
-  }
-
   total: any = 0;
+  prices = [
+    {
+      id: 0,
+      price: 1000
+    },
 
+    {
+      id: 1,
+      price: 599
+    },
 
+    {
+      id: 2,
+      price: 799
+    },
 
+    {
+      id: 3,
+      price: 999
+    },
 
-  producttotal(index: any, quantity: number): any {
+    {
+      id: 4,
+      price: 1199
+    },
 
-    if (quantity > 0) {
-      let data = this.cart[index];
+    {
+      id: 5,
+      price: 1299
+    },
 
-      //let p = this.products[index];
+    {
+      id: 6,
+      price: 1199
+    },
 
-      //let test = this.cart.find(element => element.id === p.id);
+    {
+      id: 7,
+      price: 2000
+    },
 
-      let prices = data.price;
+    {
+      id: 8,
+      price: 2000
+    },
 
-      data.quantity = quantity;
+    {
+      id: 9,
+      price: 2000
+    },
 
-      data.price = prices * quantity;
+    {
+      id: 10,
+      price: 3000
+    },
 
-      this.total = data.quantity * data.price;
+    {
+      id: 11,
+      price: 1500
     }
+  ];
 
-
-
-    //console.log(data);
-
-  }
-
-  subtotal(index: any, price: any, quantity: any) {
-
-
+  producttotal(index: any, quantity: any): any {
     let data = this.cart[index];
 
-    data.price = price;
+    let test = this.prices.find(element => element.id === data.id);
+    //console.log(test);
+
     data.quantity = quantity;
 
+    data.total = test!.price * quantity;
 
-    let sub_total = price * quantity;
 
-    console.log(sub_total);
+
+    console.log(data);
+    console.log(this.products);
+
+
   }
+
+
+
+
 
   delete(index: any) {
     this.cart.splice(index, 1);

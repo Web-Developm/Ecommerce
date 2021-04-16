@@ -18,25 +18,16 @@ export class CartComponent implements OnInit {
 
   public items: any[] = this.dt.cart;
 
-  public total=this.dt.subtotal;
-
-  public subtotal=this.dt.subtotal;
-
-
 
   ngOnInit(): void {
     console.log(this.dt.cart);
-    this.dt.logTheData();
+
   }
 
   inputChange(indx: number, e: any) {
     this.dt.producttotal(indx, e.target.value);
   }
 
-  /*subototal(price:any, quantity:any, index:any)
-  {
-    this.dt.subtotal(price,quantity,index);
-  }*/
 
   delete(index: any) {
     this.dt.delete(index);
