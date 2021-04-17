@@ -11,8 +11,8 @@
 @media screen and(max-width:1020px)
 {
   .row{
-    display: flex;
-    justify-content: center;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
   }
 }
 
