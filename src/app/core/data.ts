@@ -114,7 +114,7 @@ export class data {
 
   value: any[] = [
     {
-      final: 0
+      "final": 0
     }
   ]
 

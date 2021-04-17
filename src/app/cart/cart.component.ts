@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
 
   public items: any[] = this.dt.cart;
 
-  public value:any[]=this.dt.value;
+  public value: any[] = this.dt.value;
 
 
 
