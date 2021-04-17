@@ -130,8 +130,6 @@ export class data {
     if (quantity >= 1) {
       let data = this.cart[index];
 
-      let value = this.value[index];
-
       //let test = this.prices.find(element => element.id === data.id);
       //console.log(test);
 
@@ -142,13 +140,19 @@ export class data {
       console.log(data);
       console.log(this.products);
 
-      //this.final += data.total[index].value;
+      let final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
 
-      value.final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, index));
+      this.value[0].final = final;
+
+      console.log(final);
+
     }
 
     else {
       this.cart.splice(index, 1);
+      let final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
+
+      this.value[0].final = final;
     }
 
   }
