@@ -1,5 +1,3 @@
-import { HTTP_INTERCEPTORS } from "@angular/common/http";
-
 export class data {
   products = [
     {
@@ -114,6 +112,12 @@ export class data {
     }
   ];
 
+  value: any[] = [
+    {
+      final: 0
+    }
+  ]
+
   public cart: any[] = [];
 
   addtoCart(index: any) {
@@ -121,15 +125,12 @@ export class data {
       this.products[index])
   }
 
-  total: any = 0;
-
-
-
-
   producttotal(index: any, quantity: any): any {
 
     if (quantity >= 1) {
       let data = this.cart[index];
+
+      let value = this.value[index];
 
       //let test = this.prices.find(element => element.id === data.id);
       //console.log(test);
@@ -140,16 +141,17 @@ export class data {
 
       console.log(data);
       console.log(this.products);
+
+      //this.final += data.total[index].value;
+
+      value.final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, index));
     }
 
-    else{
-      this.cart.splice(index,1);
+    else {
+      this.cart.splice(index, 1);
     }
-
-
 
   }
-
 
 
 

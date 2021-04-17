@@ -5,7 +5,7 @@
   <table class="table text-center ">
     <thead class="bg-light text-black">
       <tr>
-        <!--<th>Remove</th>-->
+        <th>Remove</th>
         <th>Id</th>
         <th>Name</th>
         <th>Description</th>
@@ -13,13 +13,14 @@
         <th>Quantity</th>
         <th>Sub Total</th>
 
+
       </tr>
     </thead>
 
     <tbody *ngFor="let item of items; let i=index">
       <tr>
-        <!--<td><button (click)="delete(i)" class="btn btn-sm btn-outline-dark"><i class="far fa-trash-alt"></i></button>
-        </td>-->
+        <td><button (click)="delete(i)" class="btn btn-sm btn-outline-dark"><i class="far fa-trash-alt"></i></button>
+        </td>
         <td>{{item.id}}</td>
         <td>{{item.name}}</td>
         <td>{{item.description}}</td>
@@ -28,15 +29,18 @@
             (change)="inputChange(i,$event)"></td>
         <td>Rs. {{item.total}}</td>
 
-
       </tr>
 
     </tbody>
 
   </table>
 
+  <ul *ngFor="let value1 of value">
+    <li>Total Rs. {{value1.final}}</li>
+  </ul>
 
-  <p class="total">Total Rs</p>
+
+
 
 
 

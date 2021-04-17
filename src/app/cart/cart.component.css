@@ -3,7 +3,15 @@
   margin-bottom:700px;
 }
 
-.total{
-  margin-left:66rem;
-  font-size: 21px;
+ul{
+  list-style-type: none;
+  margin-left:70rem;
 }
+
+@media screen and (max-width:1020px)
+{
+  ul{
+    margin-left:26rem;
+  }
+}
+
