@@ -166,6 +166,7 @@ export class data {
     alert("Product is removed");
     let final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
     this.value[0].final = final;
+    console.log(final);
   }
 
 
