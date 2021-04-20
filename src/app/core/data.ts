@@ -39,7 +39,7 @@ export class data {
     {
       "id": 4,
       "name": "Teddy Bear",
-      "description": "Toy  ",
+      "description": "Toy",
       "price": 1199,
       "image": "../../assets/6.jpg",
       "quantity": 1,
