@@ -122,9 +122,11 @@ export class data {
 
   addtoCart(index: any) {
 
-    let sample = this.products[index];
+    let sample: any = this.products[index];
 
     if (this.cart.length == 0 || this.cart.length > 0 && this.cart.findIndex((element: any) => element.id === sample.id) === -1) {
+
+      this.products[index].total = this.products[index].price * this.products[index].quantity;
 
       this.cart.push(
         this.products[index]
@@ -132,7 +134,7 @@ export class data {
 
       alert("Product added");
 
-      this.cart[index].total = this.cart[index].price * this.cart[index].quantity;
+
 
       this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
 
@@ -140,26 +142,25 @@ export class data {
 
     else {
 
-      /*sample.quantity = sample.quantity;
+      let item: any = this.cart.find(element => element.id === index)
 
-      this.cart.findIndex(element => sample.quantity = element.quantity);
+      let gain: any = confirm("Are you again adding the product");
 
-      this.products[index].total = this.products[index].price * this.products[index].quantity;
+      let incre!: any;
 
-      this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));*/
+      if (gain == true) {
 
-      let gain=confirm("Are you agin adding the product");
+        console.log(item);
 
-      if(gain== true)
-      {
-        this.cart[index].quantity=1+this.cart[index].quantity;
+        item.quantity = 1 + item.quantity;
+
         alert("Updated the quantity successfully");
+
       }
 
-      else{
+      else {
         alert("Fail");
       }
-
 
     }
 
@@ -182,13 +183,6 @@ export class data {
       console.log(this.products);
 
       this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
-
-      //let final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
-
-      //this.value[0].final = final;
-
-      //console.log(final);
-
     }
 
     else {
