@@ -17,13 +17,19 @@
 }
 
 .col{
-  padding:10px;
-  margin:10px;
+  padding:20px;
 }
+
+
 
 .btn{
   border-radius: 20px;
   font-size: 15px;
 }
 
-
+.heading{
+  margin-top:140px;
+  padding:100px 50px 50px  120px;
+  background-color: beige;
+  border-radius: 15px;
+}

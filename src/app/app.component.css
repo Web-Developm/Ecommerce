@@ -1,0 +1,14 @@
+.navbar{
+  padding:20px 0px 20px 0px;
+}
+
+.nav-link{
+  font-size:20px;
+  color:white;
+}
+
+.footer{
+  padding:10px 0px 5px 0px;
+  font-size: 15px;
+  text-align: center;
+}

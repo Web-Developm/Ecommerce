@@ -1,0 +1,16 @@
+.products{
+  margin-top:100px;
+  padding:0px 0px 40px 0px;
+  margin-bottom: 100px;
+}
+
+.product{
+  font-size:45px;
+  margin-bottom:40px;
+}
+
+.row{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap:20px;
+}

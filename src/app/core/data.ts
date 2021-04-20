@@ -3,7 +3,7 @@ export class data {
     {
       "id": 0,
       "name": "Mast & Harbour",
-      "description": "Shirt",
+      "description": "Clothes",
       "price": 1000,
       "image": "../../assets/2.jpg",
       "quantity": 1,
@@ -12,7 +12,7 @@ export class data {
     {
       "id": 1,
       "name": "Roadster",
-      "description": "Shirt",
+      "description": "Clothes",
       "price": 599,
       "image": "../../assets/3.jpg",
       "quantity": 1,
@@ -21,7 +21,7 @@ export class data {
     {
       "id": 2,
       "name": "H&M",
-      "description": "Tshirt",
+      "description": "Clothes",
       "price": 799,
       "image": "../../assets/4.jpg",
       "quantity": 1,
@@ -30,7 +30,7 @@ export class data {
     {
       "id": 3,
       "name": "H&M",
-      "description": "Tshirt",
+      "description": "Clothes",
       "price": 999,
       "image": "../../assets/5.jpg",
       "quantity": 1,

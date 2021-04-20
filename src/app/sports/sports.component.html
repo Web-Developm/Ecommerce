@@ -1,0 +1,26 @@
+<div class="container-fluid products">
+  <h2 class="text-center product">Sports</h2>
+
+  <div class="row" *ngFor="let sample of products; let i=index">
+    <div class="list" *ngIf="sample.description == 'Sports'">
+
+      <div class="col-sm">
+        <div class="card text-center" style="width:18rem">
+          <img src="{{sample.image}}" class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{sample.name}} ({{sample.description}})</h5>
+            Quantity: <input type="number" id="quantity" name="quantity" min="0" max="5" [(ngModel)]="sample.quantity">
+            <br>
+            <br>
+            <p>Rs. {{sample.price}}</p>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>
