@@ -122,12 +122,38 @@ export class data {
 
   addtoCart(index: any) {
 
-    this.products[index].total = this.products[index].price * this.products[index].quantity;
-    this.cart.push(
-      this.products[index]);
+    let sample = this.products[index];
 
-    this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
+    if (this.cart.length == 0 || this.cart.length > 0 && this.cart.findIndex((element: any) => element.id === sample.id) === -1) {
+
+      this.cart.push(
+        this.products[index]
+      );
+      alert("Product added");
+
+      this.products[index].total = this.products[index].price * this.products[index].quantity;
+
+      this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
+
+    }
+
+    else {
+
+      /*sample.quantity = sample.quantity;
+
+      this.cart.findIndex(element => sample.quantity = element.quantity);
+
+      this.products[index].total = this.products[index].price * this.products[index].quantity;
+
+      this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));*/
+
+      alert("already in cart")
+    }
+
+
+
   }
+
 
   producttotal(index: any, quantity: any): any {
 
@@ -139,6 +165,7 @@ export class data {
       data.total = data.price * quantity;
 
       console.log(data);
+
       console.log(this.products);
 
       this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));

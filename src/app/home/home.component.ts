@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
 
   add(index: any) {
     this.dt.addtoCart(index);
-    alert("Product added");
   }
 
 
