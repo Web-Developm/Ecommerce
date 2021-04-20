@@ -1,6 +1,6 @@
 .cart{
   margin-top:140px;
-  margin-bottom:700px;
+
 }
 
 ul{
@@ -15,3 +15,24 @@ ul{
   }
 }
 
+.address{
+  margin-bottom:350px;
+}
+
+
+.name{
+  font-size: 25px;
+  font-weight: 700;
+
+}
+p{
+  font-size: 18px;
+  margin:0px;
+  padding:0px;
+
+}
+
+.payment{
+font-size: 40px;
+padding-bottom: 10px;
+}
