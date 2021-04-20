@@ -148,7 +148,19 @@ export class data {
 
       this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));*/
 
-      alert("already in cart")
+      let gain=confirm("Are you agin adding the product");
+
+      if(gain== true)
+      {
+        this.cart[index].quantity=1+this.cart[index].quantity;
+        alert("Updated the quantity successfully");
+      }
+
+      else{
+        alert("Fail");
+      }
+
+
     }
 
 
