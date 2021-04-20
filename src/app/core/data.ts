@@ -26,7 +26,6 @@ export class data {
       "image": "../../assets/4.jpg",
       "quantity": 1,
       "total": 0
-
     },
     {
       "id": 3,
@@ -115,23 +114,25 @@ export class data {
   value: any[] = [
     {
       "final": 0
+
     }
   ]
 
   public cart: any[] = [];
 
   addtoCart(index: any) {
+
+    this.products[index].total = this.products[index].price * this.products[index].quantity;
     this.cart.push(
-      this.products[index])
+      this.products[index]);
+
+    this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
   }
 
   producttotal(index: any, quantity: any): any {
 
     if (quantity >= 1) {
       let data = this.cart[index];
-
-      //let test = this.prices.find(element => element.id === data.id);
-      //console.log(test);
 
       data.quantity = quantity;
 
@@ -140,11 +141,13 @@ export class data {
       console.log(data);
       console.log(this.products);
 
-      let final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
+      this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
 
-      this.value[0].final = final;
+      //let final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
 
-      console.log(final);
+      //this.value[0].final = final;
+
+      //console.log(final);
 
     }
 
