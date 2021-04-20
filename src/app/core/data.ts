@@ -129,9 +129,10 @@ export class data {
       this.cart.push(
         this.products[index]
       );
+
       alert("Product added");
 
-      this.products[index].total = this.products[index].price * this.products[index].quantity;
+      this.cart[index].total = this.cart[index].price * this.cart[index].quantity;
 
       this.value[0].final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
 
