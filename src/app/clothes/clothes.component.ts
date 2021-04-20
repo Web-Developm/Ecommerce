@@ -15,4 +15,9 @@ export class ClothesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  add(index:any)
+  {
+    this.dt.addtoCart(index);
+  }
+
 }

@@ -15,4 +15,9 @@ export class SportsComponent implements OnInit {
 
   public products:any=this.dt.products;
 
+  add(index:any)
+  {
+    this.dt.addtoCart(index);
+  }
+
 }

@@ -12,6 +12,11 @@ export class ToysComponent implements OnInit {
 
   public products:any=this.dt.products;
 
+  add(index:any)
+  {
+    this.dt.addtoCart(index);
+  }
+
   ngOnInit(): void {
   }
 
