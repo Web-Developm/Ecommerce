@@ -179,9 +179,9 @@ export class data {
     }
 
     else {
+
       this.cart.splice(index, 1);
       let final = (this.cart.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0));
-
       this.value[0].final = final;
     }
 
