@@ -1,6 +1,36 @@
+.heading{
+  margin-top:140px;
+  padding:100px 50px 50px  120px;
+  background-color: beige;
+  border-radius: 15px;
+}
+
+.text{
+  padding:20px 0px 10px 0px;
+  width: 35%;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  font-size: 17px;
+}
+
+@media screen and (max-width:1020px)
+{
+  .text{
+    width:100%;
+  }
+}
+
+.content{
+  padding:100px 0px 100px 0px;
+}
+
+
 .message{
-  font-size: 25px;
-  font-weight: 700  ;
+  background-color: beige;
+  padding:20px 0px 20px  0px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .row{
@@ -20,16 +50,18 @@
   padding:20px;
 }
 
-
-
 .btn{
   border-radius: 20px;
   font-size: 15px;
 }
 
-.heading{
-  margin-top:140px;
-  padding:100px 50px 50px  120px;
-  background-color: beige;
-  border-radius: 15px;
+.items{
+  padding:0px 0px 40px 0px;
+  margin-bottom: 100px;
 }
+
+.item{
+  font-size:45px;
+  margin-bottom:40px;
+}
+
