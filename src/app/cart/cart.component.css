@@ -32,6 +32,10 @@ p{
 
 }
 
+#check{
+  background-color:black;
+}
+
 .payment{
 font-size: 40px;
 padding-bottom: 10px;
